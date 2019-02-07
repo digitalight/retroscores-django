@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>RetroScores</title>
-</head>
-<body>
-	{% for score in scores %}
-		{{ score }}
-	{% endfor %}
-</body>
-</html>
+{% extends 'scores/base.html' %}
+
+{% block content %}
+		<div class="row">
+			{% for score in scores %}
+			<div class="col-md-3">
+				<div class="card">
+					<img src="{{score.scoreScreenShot.url}}" class="card-img-top" height="200px" alt="{{score.scoreResult}}">
+					<div class="card-body">
+						<h6 class="card-title"><a href="{% url 'game_single' pk=score.scoreGame.pk %}">{{score.scoreGame}}</a></h6>
+						<h6 class="card-subtitle mb-2 text-muted">{{score.scoreTimeDate}}</h6>
+						</div>
+						<div class="card-footer">
+							<h6 class="">Score: {{score.scoreResult}}</h6>
+						</div>
+				</div>
+			</div>
+		{% endfor %}
+				</div>
+{% endblock %}

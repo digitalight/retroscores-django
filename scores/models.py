@@ -9,8 +9,8 @@ class Score(models.Model):
     scoreResult = models.IntegerField()
     scoreGame = models.ForeignKey('Game', on_delete=models.CASCADE)
     scoreTimeDate = models.DateTimeField(default=timezone.now)
-    scoreScreenShot = models.ImageField(upload_to='shots/%Y/%m/%d/')
-    
+    scoreScreenShot = models.ImageField(upload_to='shots/%Y/%m/%d')
+
     def publish(self):
         self.scoreTimeDate = timezone.now()
         self.save()
