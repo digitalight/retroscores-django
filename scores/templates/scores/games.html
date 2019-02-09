@@ -1,0 +1,21 @@
+{% extends 'scores/base.html' %}
+
+{% block content %}
+<h3>Game List</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <th>Name</th>
+    <th>Year</th>
+    <th>System</th>
+  </thead>
+  <tbody>
+    {% for game in games %}
+    <tr>
+      <td><a href="{% url 'game_single' pk=game.pk %}">{{game.gameName}}</a></td>
+      <td>{{game.gameYear}}</td>
+      <td>{{game.gameSystem}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
