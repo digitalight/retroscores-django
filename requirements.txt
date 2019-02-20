@@ -1,1 +1,2 @@
-Django~=2.1.5python-dotenv
+Django~=2.1.5
+python-dotenv
