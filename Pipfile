@@ -4,8 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "~=2.1.5"
+Django = "~=2.2"
 python-dotenv = "*"
+pillow = "*"
 
 [dev-packages]
 
