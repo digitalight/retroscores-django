@@ -5,6 +5,8 @@ This project is to build a website that is used to keep record of my highscores 
 ## Prerequisites
 
 + Python 3
++ Django 2.2
++ Pillow
 
 ## Execute 
 
